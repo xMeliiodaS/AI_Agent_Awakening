@@ -5,7 +5,20 @@ import numpy as np
 # Initialize screen capture
 with mss.mss() as sct:
     # Capture screen
-    screenshot = sct.shot(output="screenshot.png")
+    screenshot_path = sct.shot(output="../images/screenshot.png")
+
+# Load the captured screenshot using OpenCV
+img = cv2.imread(screenshot_path)
+
+# Get image dimensions
+height, width, _ = img.shape
+
+# Define the region to crop (for example, removing the bottom 50 pixels)
+cropped_img = img[0:height-50, 0:width]  # Adjust 50 to the size of your taskbar
+
+# Replace the original screenshot with the cropped image
+cv2.imwrite(screenshot_path, cropped_img)
+
 
 
 # import mss

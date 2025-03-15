@@ -1,7 +1,6 @@
 import time
 from core.coordinate_finder import OCRProcessor
-from commands.click import ClickCommand  # import your commands
-from commands.simulate_mouse_click import simulate_move_and_click
+from commands.click_command import ClickCommand
 
 
 def run_main_flow(param_image_path, param_search_word, param_template_path):
@@ -26,7 +25,7 @@ def test_click_command(x, y):
 def main():
     image_path = "images/screenshot.png"
     template_path = "button_template.png"  # Only if you're using template matching for graphics
-    search_word = "NVIDIA"  # The word we want to search for and click
+    search_word = "TeamViewer"  # The word we want to search for and click
 
     # Running the flow with both OCR and image recognition
     run_main_flow(image_path, search_word, template_path)
