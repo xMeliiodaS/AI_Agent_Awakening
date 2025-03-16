@@ -3,7 +3,8 @@ from commands.base_command import BaseCommand
 
 class TypeTextCommand(BaseCommand):
     def __init__(self, text):
-        super().__init__(text=text)
+        super().__init__()  # Initialize BaseCommand
+        self.set_params(text=text)  # Use the setter to assign parameters
         self.required_params = ["text"]  # Ensure text is provided
 
     def execute_command(self):

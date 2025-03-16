@@ -11,6 +11,12 @@ class BaseCommand:
         self.description = self.__class__.__name__  # Default to class name
         self.validate_params()  # Validate required parameters before execution
 
+    def set_params(self, **kwargs):
+        """
+        Sets the parameters dynamically for the command.
+        """
+        self.params.update(kwargs)  # Updates the params with new values
+
     @abstractmethod
     def execute_command(self):
         """

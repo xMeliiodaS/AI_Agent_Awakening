@@ -6,7 +6,8 @@ from commands.base_command import BaseCommand
 
 class OpenAppCommand(BaseCommand):
     def __init__(self, app_name):
-        super().__init__(app_name=app_name)
+        super().__init__()  # Initialize BaseCommand
+        self.set_params(app_name=app_name)  # Use the setter to assign parameters
         self.required_params = ["app_name"]  # Ensure app_name is provided
 
     def execute_command(self):
