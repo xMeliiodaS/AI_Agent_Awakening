@@ -9,7 +9,7 @@ class OpenAppCommand(BaseCommand):
         super().__init__(app_name=app_name)
         self.required_params = ["app_name"]  # Ensure app_name is provided
 
-    def execute(self):
+    def execute_command(self):
         app_name = self.params["app_name"]
 
         pyautogui.press('win')
@@ -18,7 +18,7 @@ class OpenAppCommand(BaseCommand):
         pyautogui.press('enter')
         print(f"Opening app: {app_name}")
 
-    def undo(self):
+    def undo_command(self):
         # You can use taskkill to close the app (if it's running on Windows).
         app_name = self.params["app_name"]
         subprocess.run(f"taskkill /f /im {app_name}.exe", shell=True)

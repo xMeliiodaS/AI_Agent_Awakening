@@ -17,15 +17,15 @@ def run_main_flow(param_image_path, param_search_word, param_template_path):
 
 def test_click_command(x, y):
     click_cmd = ClickCommand(x, y)
-    click_cmd.execute()  # Execute click command at the coordinates
+    click_cmd.execute_command()  # Execute click command at the coordinates
     time.sleep(0.2)
-    click_cmd.execute()  # Execute click command at the coordinates
+    click_cmd.execute_command()  # Execute click command at the coordinates
 
 
 def main():
     image_path = "images/screenshot.png"
     template_path = "button_template.png"  # Only if you're using template matching for graphics
-    search_word = "TeamViewer"  # The word we want to search for and click
+    search_word = "Edge"  # The word we want to search for and click
 
     # Running the flow with both OCR and image recognition
     run_main_flow(image_path, search_word, template_path)

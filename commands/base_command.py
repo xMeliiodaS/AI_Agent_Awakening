@@ -12,13 +12,13 @@ class BaseCommand:
         self.validate_params()  # Validate required parameters before execution
 
     @abstractmethod
-    def execute(self):
+    def execute_command(self):
         """
         Abstract method to be implemented by subclasses to execute the command.
         """
         pass
 
-    def undo(self):
+    def undo_command(self):
         """
         Undo the command (optional, can be overridden by subclasses).
         """

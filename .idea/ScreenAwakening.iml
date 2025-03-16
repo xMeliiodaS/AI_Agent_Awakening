@@ -5,7 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/.venv" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/.venv/Lib/site-packages/lmstudio-0.0.1.dist-info" />
-    <orderEntry type="jdk" jdkName="Python 3.10 (ScreenAwakening)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.10 (AI_Agent_Awakening)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
