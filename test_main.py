@@ -23,6 +23,7 @@ def test_click_command(x, y):
     time.sleep(0.2)
     click_cmd.execute_command()  # Execute click command at the coordinates
 
+
 def test_open_app_command(app_name):
     open_app_cmd = OpenAppCommand(app_name)
     open_app_cmd.execute_command()
@@ -31,8 +32,8 @@ def test_open_app_command(app_name):
 def main():
     image_path = "images/screenshot.png"
     template_path = "button_template.png"  # Only if you're using template matching for graphics
-    search_word = "Edge"  # The word we want to search for and click
-    app_name = "chrome"
+    search_word = "Discord"  # The word we want to search for and click
+    app_name = "Discord"
 
     # Running the flow with both OCR and image recognition
     run_main_flow(image_path, search_word, template_path, app_name)
@@ -40,4 +41,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

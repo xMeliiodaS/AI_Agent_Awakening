@@ -14,12 +14,10 @@ img = cv2.imread(screenshot_path)
 height, width, _ = img.shape
 
 # Define the region to crop (for example, removing the bottom 50 pixels)
-cropped_img = img[0:height-50, 0:width]  # Adjust 50 to the size of your taskbar
+cropped_img = img[0:height - 50, 0:width]  # Adjust 50 to the size of your taskbar
 
 # Replace the original screenshot with the cropped image
 cv2.imwrite(screenshot_path, cropped_img)
-
-
 
 # import mss
 # import cv2

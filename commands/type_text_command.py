@@ -1,6 +1,7 @@
 import pyautogui
 from commands.base_command import BaseCommand
 
+
 class TypeTextCommand(BaseCommand):
     def __init__(self, text):
         super().__init__()  # Initialize BaseCommand
