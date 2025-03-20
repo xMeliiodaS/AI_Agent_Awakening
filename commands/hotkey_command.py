@@ -21,3 +21,5 @@ class HotkeyCommand(BaseCommand):
 
     def undo_command(self):
         pass
+
+# queue.add_command(HotkeyCommand("ctrl", "c"))  # Copy

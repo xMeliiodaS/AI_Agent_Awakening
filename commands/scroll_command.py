@@ -31,3 +31,6 @@ class ScrollCommand(BaseCommand):
         reverse_scroll_value = amount if direction == "up" else -amount
         pyautogui.scroll(reverse_scroll_value)
         print(f"Undoing scroll: Scrolling {direction} by {amount} steps.")
+
+# queue.add_command(ScrollCommand("down", 5))  # Scrolls down 5 steps
+# queue.add_command(ScrollCommand("up", 3))    # Scrolls up 3 steps
