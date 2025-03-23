@@ -1,5 +1,12 @@
 {
-    "Open Notepad": ["open_app:Notepad", "wait:2"],
-    "Type Text": ["type_text:Hello, world!"],
-    "Close Notepad": ["hotkey:alt+f4"]
+    "Open Notepad": [
+        {"action": "open_app", "params": {"app_name": "Notepad"}},
+        {"action": "wait", "params": {"seconds": 2}}
+    ],
+    "Type Text": [
+        {"action": "type_text", "params": {"text": "Hello, world!"}}
+    ],
+    "Close Notepad": [
+        {"action": "hotkey", "params": {"keys": "alt+f4"}}
+    ]
 }

@@ -1,5 +1,11 @@
 {
-    "previous_commands": [],
-    "last_screen_text": "",
+    "previous_commands": [
+        "open_app",
+        "wait",
+        "open_app",
+        "open_app",
+        "wait"
+    ],
+    "last_screen_text": "Notepad opened",
     "expected_next_command": ""
 }

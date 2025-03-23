@@ -2,13 +2,14 @@ import json
 import os
 
 # Paths to JSON files
-CONTEXT_MEMORY_PATH = "./ai_data/context_memory.json"
-COMMAND_TEMPLATES_PATH = "./ai_data/command_templates.json"
-ERROR_RESPONSES_PATH = "./ai_data/error_responses.json"
+CONTEXT_MEMORY_PATH = "core/ai_data/context_memory.json"
+COMMAND_TEMPLATES_PATH = "core/ai_data/command_templates.json"
+ERROR_RESPONSES_PATH = "core/ai_data/error_responses.json"
 
 
-class AIProcessor:
+class AIProcessorTest:
     def __init__(self):
+        print(os.getcwd())
         self.context_memory = self.load_json(CONTEXT_MEMORY_PATH)
         self.command_templates = self.load_json(COMMAND_TEMPLATES_PATH)
         self.error_responses = self.load_json(ERROR_RESPONSES_PATH)

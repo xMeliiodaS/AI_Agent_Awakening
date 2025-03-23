@@ -2,7 +2,7 @@ import pyautogui
 from commands.base_command import BaseCommand
 
 
-class WindowCommand(BaseCommand):
+class WindowsCommand(BaseCommand):
     def __init__(self, action: str):
         """
         Handles window operations like minimize, maximize, close, or switch.
