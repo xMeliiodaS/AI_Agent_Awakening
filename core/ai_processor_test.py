@@ -14,14 +14,16 @@ class AIProcessorTest:
         self.command_templates = self.load_json(COMMAND_TEMPLATES_PATH)
         self.error_responses = self.load_json(ERROR_RESPONSES_PATH)
 
-    def load_json(self, path):
+    @staticmethod
+    def load_json(path):
         """ Load JSON data from a file. """
         if not os.path.exists(path):
             return {}
         with open(path, "r", encoding="utf-8") as file:
             return json.load(file)
 
-    def save_json(self, path, data):
+    @staticmethod
+    def save_json(path, data):
         """ Save JSON data to a file. """
         with open(path, "w", encoding="utf-8") as file:
             json.dump(data, file, indent=4)

@@ -4,6 +4,7 @@ from commands.type_text_command import TypeTextCommand
 from commands.wait_command import WaitCommand
 from commands.windows_command import WindowsCommand
 
+
 def main():
     ai = AIProcessorTest()  # Initialize AI Processor
 
@@ -35,6 +36,7 @@ def main():
         ai.update_context(screen_text="Notepad opened", last_command=action)
 
     print("Test flow completed.")
+
 
 if __name__ == "__main__":
     main()
