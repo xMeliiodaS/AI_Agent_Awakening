@@ -1,3 +1,5 @@
+import time
+
 from core.ai_processor_test import AIProcessorTest
 from commands.open_app_command import OpenAppCommand
 from commands.type_text_command import TypeTextCommand
@@ -9,10 +11,12 @@ def main():
 
     # Example test: Open Notepad, type "Hello, world!", wait for 2 seconds, then close it
     high_level_commands = [
-        "Open Notepad",
+        "Open Chrome",
+        "Wait",
         "Type Text",
-        "Wait for 2 seconds",
-        "Close Notepad"
+        "Wait",
+        "Close Chrome",
+        "Wait"
     ]
 
     # Process each command in the sequence
@@ -25,18 +29,20 @@ def main():
             return
 
         for command in command_sequence:
-            action = command.split(":")[0]
-            params = command.split(":")[1] if len(command.split(":")) > 1 else ""
-
-            print(f"Executing: {action} with parameters: {params}")
+            # Assuming command is a dictionary with keys like "action" and "params"
+            action = command["action"]  # Get the action string
+            params = command["params"]  # Get the parameters
 
             if action == "open_app":
-                OpenAppCommand(params).execute_command()
+                OpenAppCommand(params["app_name"]).execute_command()
             elif action == "wait":
-                WaitCommand(int(params)).execute_command()
+                # WaitCommand(params["seconds"]).execute_command()
+                print('waiting 1.25s')
+                time.sleep(1.25)
             elif action == "type_text":
-                TypeTextCommand(params).execute_command()
-            elif action == "close_window":
+                TypeTextCommand(params["text"]).execute_command()
+            elif action == "hotkey":
+                print('closing window')
                 WindowsCommand("close").execute_command()
 
             # Update AI memory after executing the command

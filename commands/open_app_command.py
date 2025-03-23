@@ -16,6 +16,7 @@ class OpenAppCommand(BaseCommand):
         pyautogui.press('win')
         sleep(1)
         pyautogui.write(app_name)
+        sleep(0.5)
         pyautogui.press('enter')
         print(f"Opening app: {app_name}")
 
