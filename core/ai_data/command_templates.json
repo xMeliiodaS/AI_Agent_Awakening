@@ -1,0 +1,5 @@
+{
+    "Open Notepad": ["open_app:Notepad", "wait:2"],
+    "Type Text": ["type_text:Hello, world!"],
+    "Close Notepad": ["hotkey:alt+f4"]
+}

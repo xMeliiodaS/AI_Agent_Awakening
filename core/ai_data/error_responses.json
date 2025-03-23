@@ -1,0 +1,8 @@
+{
+    "retry_threshold": 3,
+    "error_solutions": {
+        "app_not_found": ["retry", "open_alternate_app"],
+        "window_not_focused": ["bring_to_front", "retry"],
+        "text_not_found": ["retry", "use_ocr", "ask_user"]
+    }
+}
