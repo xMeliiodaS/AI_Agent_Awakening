@@ -44,7 +44,7 @@ def main():
                 TypeTextCommand(params["text"]).execute_command()
             elif action == "hotkey":
                 print('closing window')
-                WindowsCommand("close").execute_command()
+                WindowsCommand("maximize").execute_command()
 
             # Update AI memory after executing the command
             ai.update_context(screen_text="Notepad opened", last_command=action)
