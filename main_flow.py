@@ -6,16 +6,17 @@ from commands.type_text_command import TypeTextCommand
 from commands.wait_command import WaitCommand
 from commands.windows_command import WindowsCommand
 
+
 def main():
     ai = AIProcessorTest()  # Initialize AI Processor
 
     # Example test: Open Notepad, type "Hello, world!", wait for 2 seconds, then close it
     high_level_commands = [
-        "Open Chrome",
+        "Open Notepad",
         "Wait",
         "Type Text",
         "Wait",
-        "Close Chrome",
+        "Close Notepad",
         "Wait"
     ]
 
@@ -49,6 +50,7 @@ def main():
             ai.update_context(screen_text="Notepad opened", last_command=action)
 
     print("Test flow completed.")
+
 
 if __name__ == "__main__":
     main()
